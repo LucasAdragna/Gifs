@@ -1,0 +1,19 @@
+<div
+  class="d-flex justify-content-center animate__animated animate__fadeInRightBig"
+>
+  <img
+    [src]="url"
+    [alt]="alt"
+    class="card-img-top animate__animated animate__fadeInRightBig"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoaded ? '' : 'none' }"
+  />
+
+  <img
+    src="assets/louder.svg"
+    height="35"
+    width="35"
+    class="mt-3 animate__animated animate__fadeInRightBig"
+    *ngIf="!hasLoaded"
+  />
+</div>
